@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view class="input">
+  <input bindinput="bindKeyInput" placeholder="请输入任务名称" value="{{inputValue}}"/>
+  <button bindtap="add">确定</button>
+</view>
+<view class="list">
+  <block wx:for="{{list}}">
+    <view>
+      <checkbox-group bindchange="change" data-index="{{index}}">
+        <checkbox value="{{item.checked}}"checked="{{item.checked}}" />
+      </checkbox-group>
+      <text>{{item.value}}</text><button bindtap="delete" data-index="{{index}}">删除</button>
+    </view>
+  </block>
+  <view>
+    {{complete}}个已完成/{{list.length}}个任务
+  </view>
+</view>

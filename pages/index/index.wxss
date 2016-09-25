@@ -1,0 +1,6 @@
+/**index.wxss**/
+.input{ padding: 20rpx}
+
+.list view{ padding:10rpx 20rpx; overflow: hidden}
+.list view text{ display: inline-block; line-height: 92rpx  }
+.list view button{ width: 200rpx; display: inline-block; float: right }
